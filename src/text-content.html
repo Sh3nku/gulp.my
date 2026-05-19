@@ -1,0 +1,155 @@
+@@include('html/header.html',{
+'title': 'Главная страница',
+'breadcrumb': '',
+'h1': 'Навигационная страница'
+})
+
+<section class="section">
+    <div class="container">
+        <div class="section__head">
+            <h2>Заголовок блока</h2>
+        </div>
+
+        <div class="section__content text-content">
+            <h2>Заголовок H2</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem beatae deserunt fugit inventore ipsa labore obcaecati, odio omnis, qui quis reprehenderit sapiente temporibus! Dignissimos et magnam modi. Aliquam et modi, nobis numquam sint unde. Accusamus aspernatur, dolore fugit inventore ipsum nesciunt nisi officiis placeat quod quos tempore veritatis vitae.</p>
+
+            <h3>Заголовок H3</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nulla, possimus ratione similique sit sunt? Architecto autem cumque inventore modi nam nulla placeat vitae voluptatibus. Alias amet atque molestiae officiis.</p>
+
+            <h4>Заголовок H4</h4>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda deleniti facilis ipsam placeat praesentium qui repudiandae saepe vel veritatis.</p>
+
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quo!</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+            </ul>
+
+            <ol>
+                <li>Lorem ipsum dolor.</li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eveniet harum molestias nostrum!
+                    <ol>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum.</li>
+                    </ol>
+                </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li>
+                    Lorem ipsum dolor sit amet.
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quo!</li>
+                        <li>Lorem ipsum dolor.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta distinctio itaque labore modi natus nemo quia repudiandae, rerum sit tempore voluptas? Fugiat, modi voluptates?</p>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Заголовок первого столбца</th>
+                    <th>Заголовок второго столбца</th>
+                    <th>Заголовок третьего столбца</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae dolorem doloribus dolorum expedita, facilis odio, officia perferendis, placeat quo tempora tenetur velit vitae voluptas voluptatibus. Accusamus consequuntur eum eveniet id libero quas saepe voluptatum. A, dolor error ipsum, laboriosam magnam necessitatibus porro possimus quasi quisquam rerum sit suscipit voluptatibus.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolores et ipsam natus! Ab atque dolores harum illo labore quos rerum ullam veniam! Nemo, nulla?</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section__foot">
+            <h3>Подвал блока</h3>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section__head">
+            <h2>Аккордеоны</h2>
+        </div>
+
+        <div class="section__content">
+            <div class="accordion">
+                <div class="accordion__head | js-accordion">
+                    Аккордеон
+                </div>
+
+                <div class="accordion__body">
+                    <div class="accordion__inner">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae dolorem doloribus dolorum expedita, facilis odio, officia perferendis, placeat quo tempora tenetur velit vitae voluptas voluptatibus. Accusamus consequuntur eum eveniet id libero quas saepe voluptatum. A, dolor error ipsum, laboriosam magnam necessitatibus porro possimus quasi quisquam rerum sit suscipit voluptatibus.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion__head | js-accordion">
+                    Аккордеон
+                </div>
+
+                <div class="accordion__body">
+                    <div class="accordion__inner">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae dolorem doloribus dolorum expedita, facilis odio, officia perferendis, placeat quo tempora tenetur velit vitae voluptas voluptatibus. Accusamus consequuntur eum eveniet id libero quas saepe voluptatum. A, dolor error ipsum, laboriosam magnam necessitatibus porro possimus quasi quisquam rerum sit suscipit voluptatibus.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="tabs-button">
+            <input id="tab1" type="radio" name="radio" value="1" checked>
+            <label for="tab1">Первый</label>
+
+            <input id="tab2" type="radio" name="radio" value="2">
+            <label for="tab2">Второй</label>
+        </div>
+
+        <div class="tabs-body">
+            <div data-tab="tab1">Таб первый</div>
+            <div data-tab="tab2">Таб второй</div>
+        </div>
+
+        <div class="tabs-body">
+            <div data-tab="tab1">Таб первый</div>
+            <div data-tab="tab2">Таб второй</div>
+        </div>
+
+        <div class="tabs-button">
+            <input id="tab3" type="radio" name="radio2" value="3" checked>
+            <label for="tab3">Первый</label>
+
+            <input id="tab4" type="radio" name="radio2" value="4">
+            <label for="tab4">Второй</label>
+        </div>
+
+        <div class="tabs-body">
+            <div data-tab="tab3">Таб третий</div>
+            <div data-tab="tab4">Таб четвёртый</div>
+        </div>
+
+        <div class="tabs-body">
+            <div data-tab="tab3">Таб третий</div>
+            <div data-tab="tab4">Таб четвёртый</div>
+        </div>
+    </div>
+</section>
+
+@@include('html/footer.html')

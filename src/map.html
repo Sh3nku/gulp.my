@@ -1,0 +1,83 @@
+@@include('html/header.html',{
+'title': 'Карта Яндекс',
+'breadcrumb': [{
+link: '/',
+title: 'Главная'
+},{
+link: '',
+title: 'Карта Яндекс'
+}],
+'h1': 'Карта Яндекс'
+})
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=6ff40789-64ad-4d8d-8fa2-f4ea98474a2c&lang=ru_RU" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+    let map;
+    ymaps.ready(init);
+
+    function init(){
+        map = new ymaps.Map( 'yandex-map', {
+            center: [54.723725, 20.312675],
+            zoom: 13,
+            controls: ['zoomControl', 'geolocationControl']
+        });
+
+        let pixelCenter = map.getGlobalPixelCenter(54.723725, 20.312675);
+
+        pixelCenter = [
+            pixelCenter[0] - 150,
+            pixelCenter[1]
+        ];
+
+        let geoCenter = map.options.get( 'projection' ).fromGlobalPixels( pixelCenter, map.getZoom() );
+
+        map.setCenter( geoCenter );
+
+        let location = ymaps.geolocation.get();
+
+        console.log(location)
+
+        let placemark = new ymaps.Placemark(
+            [54.723725, 20.312675],
+            {},
+            {
+                iconLayout: 'default#image',
+                iconImageHref: '/images/placemark.png',
+                iconImageSize: [150, 150],
+                iconImageOffset: [-75, -75]
+            }
+        );
+
+        map.geoObjects.add( placemark );
+    }
+
+
+</script>
+
+<section class="section">
+    <div class="container">
+        <div class="section__content text-content">
+            <div class="yandex-map__wrapper">
+                <div class="yandex-map__window">
+                    <div class="yandex-map__window-title">
+                        Заголовок
+                    </div>
+
+                    <div class="yandex-map__window-text text-content">
+                        <p>Lorem ipsum dolor.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repellat.</p>
+                    </div>
+
+                    <div class="yandex-map__window-button">
+                        <button class="button" id="getRoute">Путь</button>
+                    </div>
+                </div>
+                <div id="yandex-map" class="yandex-map"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('html/footer.html')

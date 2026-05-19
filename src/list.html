@@ -1,0 +1,37 @@
+@@include('html/header.html',{
+'title': 'Плитка + показать ещё',
+'breadcrumb': [{
+link: '/',
+title: 'Главная'
+},{
+link: '',
+title: 'Плитка + показать ещё'
+}],
+'h1': 'Плитка + показать ещё'
+})
+
+<section class="section">
+    <div class="container">
+        <div class="tile-list" id="content">
+            <div class="tile-item"></div>
+
+            <div class="tile-item"></div>
+
+            <div class="tile-item"></div>
+
+            <div class="tile-item"></div>
+
+            <div class="tile-item"></div>
+
+            <div class="tile-item"></div>
+
+            <div class="pagination-more">
+                <a href="./list.html" data-target="content" class="button js-show-more">
+                    <span>Показать ещё</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('html/footer.html')

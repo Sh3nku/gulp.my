@@ -1,0 +1,234 @@
+@@include('html/header.html',{
+'title': 'Главная страница',
+'breadcrumb': '',
+'h1': 'Главная страница'
+})
+
+<section class="section">
+    <div class="container">
+        <h2>Формы и кнопки</h2>
+
+        <form class="form" novalidate action="./response-success.html">
+            <div class="form__title">Заголовок формы</div>
+            <div class="form__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias blanditiis dolor harum in perferendis, placeat quae quas quos rem.</div>
+            <div class="form__row _double">
+                <div class="form__row-container">
+                    <div class="form__input">
+                        <div class="form__input-icon__pre">
+                            <svg class="icon-checkbox">
+                                <use href="./images/sprite.svg#checkbox"></use>
+                            </svg>
+                        </div>
+                        <input class="form__input-field" type="text" name="a" required>
+                    </div>
+
+                    <div class="form__input-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, hic?</div>
+                </div>
+
+                <div class="form__input">
+                    <input class="form__input-field" type="text" name="b">
+                    <div class="form__input-icon">
+                        <svg class="icon-checkbox">
+                            <use href="./images/sprite.svg#checkbox"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__row _double">
+                <div class="form__input">
+                    <div class="form__input-icon__pre">
+                        <svg class="icon-checkbox">
+                            <use href="./images/sprite.svg#checkbox"></use>
+                        </svg>
+                    </div>
+                    <input class="form__input-field" type="text" name="d" placeholder=" ">
+                    <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid, architecto aspernatur assumenda at cum dolores dolorum, ipsa necessitatibus nihil omnis placeat quae quia ratione saepe sunt tempora temporibus.</label>
+                    <div class="form__input-icon">
+                        <svg class="icon-checkbox">
+                            <use href="./images/sprite.svg#checkbox"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="form__input-wrapper">
+                    <div class="form__input">
+                        <input class="form__input-field" type="text" name="e" placeholder=" ">
+                        <label>Email</label>
+                    </div>
+
+                    <div class="form__input-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, hic?</div>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input-wrapper">
+                    <div class="form__input">
+                        <input class="form__input-field" type="email" name="c" placeholder=" ">
+                        <label>Email</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input-wrapper">
+                    <div class="form__input">
+                        <input class="form__input-field" type="tel" name="phone" placeholder=" ">
+                        <label>Телефон</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input">
+                    <textarea class="form__input-field" placeholder=" "></textarea>
+                    <label>Email</label>
+                </div>
+            </div>
+
+            <div class="form__row _inline">
+                <div class="form__input">
+                    <input id="Checkbox01" type="checkbox" name="check[]" value="on" required>
+                    <label for="Checkbox01">Короткий</label>
+                </div>
+
+                <div class="form__input">
+                    <input id="Checkbox02" type="checkbox" name="check[]" value="on" required>
+                    <label for="Checkbox02">Средний</label>
+                </div>
+
+                <div class="form__input">
+                    <input id="Checkbox03" type="checkbox" name="check[]" value="on" required>
+                    <label for="Checkbox03">Длинный</label>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input">
+                    <input id="Checkbox04" type="checkbox" name="check-04" value="on" required>
+                    <label for="Checkbox04">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, dolorem dolorum earum eius minus nulla ratione saepe sapiente. Beatae consectetur, consequuntur dignissimos dolor dolorem eius eveniet fugit hic illo inventore ipsam laborum modi molestiae molestias mollitia non, placeat recusandae rem saepe sequi similique, soluta voluptas voluptatibus! Enim, eveniet.</label>
+                </div>
+            </div>
+
+            <div class="form__row _inline">
+                <div class="form__input">
+                    <input id="Radio01" type="radio" name="radio" value="1">
+                    <label for="Radio01">Красный</label>
+                </div>
+
+                <div class="form__input">
+                    <input id="Radio02" type="radio" name="radio" value="2">
+                    <label for="Radio02">Синий</label>
+                </div>
+
+                <div class="form__input">
+                    <input id="Radio03" type="radio" name="radio" value="3">
+                    <label for="Radio03">Зелёный</label>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input">
+                    <input
+                        id="superFile"
+                        type="file"
+                        name="file"
+                        data-title="Загрузите файл"
+                        data-description="Для загрузки файла нажмите или перетащите файл в область"
+                        data-value='[{"id":125,"type":"image\/jpeg","size":4650981,"name":"original_name.file","path":"\/files\/upload\/106-818-565.jpg"}]'
+                    >
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__input">
+                    <input
+                        type="file"
+                        name="multiFile"
+                        data-max_file_size="1548576"
+                        multiple
+                        accept=".csv, .xml, .svg"
+                    >
+                </div>
+            </div>
+
+            <div class="form__buttons">
+                <button class="button" type="submit">
+                    <span>Отправить</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Кнопки</h2>
+
+        <div class="cols">
+            <div class="col-l-3 col-s-6">
+                <button class="button" type="submit">
+                    <svg class="icon-checkbox">
+                        <use href="./images/sprite.svg#checkbox"></use>
+                    </svg>
+                    <span>Кнопка</span>
+                </button>
+            </div>
+
+            <div class="col-l-3 col-s-6">
+                <a class="button" href="#">
+                    <span>Кнопка</span>
+                    <svg class="icon-checkbox">
+                        <use href="./images/sprite.svg#checkbox"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="col-l-3 col-s-6">
+                <button class="button _loader" type="submit">
+                    <span>Кнопка</span>
+                </button>
+            </div>
+
+            <div class="col-l-3 col-s-6">
+                <button class="button" type="submit" disabled>
+                    <span>Кнопка</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section__head">
+            <h2>Попапы</h2>
+        </div>
+
+        <div class="section__content text-content">
+            <p>
+                <a href="#Popup" class="js-popup">Ссылка на эту страницу (Якорь)</a>
+            </p>
+            <p>
+                <a href="response-popup.html#Popup" class="js-popup">Ссылка на другую страницу</a>
+            </p>
+            <p>
+                <a href="response-popup.html#PopupLong" class="js-popup">Ссылка на другую страницу с большим текстом</a>
+            </p>
+            <p>
+                <a href="response-popup.html#PopupForm" class="js-popup">Ссылка на форму</a>
+            </p>
+
+            <div id="Popup" hidden>
+                <div class="text-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum deleniti, dolorem, in labore necessitatibus non officiis pariatur quasi quo ratione reprehenderit sed ut. Deleniti et hic itaque quos suscipit.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum hic suscipit tempora veritatis?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@@include('html/footer.html')

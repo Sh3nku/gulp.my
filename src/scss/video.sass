@@ -1,0 +1,97 @@
+.video
+  position: relative
+
+  &._played
+    .video__action
+      opacity: 0
+      visibility: hidden
+
+      svg
+        &.svg-icon__pause
+          opacity: 1
+          visibility: visible
+
+        &.svg-icon__play
+          opacity: 0
+          visibility: hidden
+
+      &-wrapper
+        &:before
+          opacity: 0
+          visibility: hidden
+
+        &:hover
+          @media ( hover: hover )
+            .video__action
+              opacity: 1
+              visibility: visible
+
+    .video__title
+      opacity: 0
+      visibility: hidden
+
+  video
+    width: 100%
+
+  &__action
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    background-color: #FFFFFF
+    position: absolute
+    top: 50%
+    left: 50%
+    translate: -50% -50%
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: opacity .3s ease, visibility .3s ease, scale .3s ease
+
+    @media ( max-width: 767px )
+      width: 48px
+      height: 48px
+
+    svg
+      position: absolute
+      top: 50%
+      left: 50%
+      translate: -50% -50%
+      transition: opacity .3s ease, visibility .3s ease
+
+      @media ( max-width: 767px )
+        width: 14px
+
+      &.svg-icon__pause
+        opacity: 0
+        visibility: hidden
+
+    &-wrapper
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      cursor: pointer
+      display: flex
+      align-items: flex-end
+
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient( 180deg, rgba( 0, 0, 0, 0 ) 9.14%, rgba( 0, 0, 0, .5 ) 100% )
+        transition: opacity .3s ease, visibility .3s ease
+
+      &:hover
+        @media ( hover: hover )
+          .video__action
+            scale: 1.1
+
+  &__title
+    padding: 10px 20px
+    position: relative
+    color: white
+    transition: opacity .3s ease, visibility .3s ease

@@ -1,0 +1,419 @@
+html
+  height: 100%
+  scroll-behavior: smooth
+  --text: #202020
+  --blue-dark: #1662A9
+  --blue: #1875CA
+  --blue-light: #9AC8F2
+  --blue-lighter: #DFEEF8
+  --gray-dark: #6D7D8B
+  --gray: #E1E4EB
+  --gray-light: #F5F5F5
+  --red: #FF0021
+  --red-light: #FFE6E9
+  --green: #00A35F
+  --green-light: #D9F1E7
+
+body
+  height: 100%
+  font-family: Montserrat, sans-serif
+  font-size: 16px
+  line-height: 1.5
+  min-width: 375px
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  color: var( --text )
+
+  @media ( max-width: 767px )
+    font-size: 14px
+
+  &._overflow
+    overflow: hidden
+
+*::-webkit-scrollbar
+  width: 15px
+  height: 15px
+  background-color: var( --gray )
+
+  &-track
+    width: 10px
+    background-color: var( --gray )
+
+  &-thumb
+    border-radius: 5px
+    background-color: var( --gray-dark )
+    border: 2px solid var( --gray )
+
+    &:hover
+      background-color: var( --blue )
+
+main
+  flex-grow: 1
+
+.container
+  width: 100%
+  max-width: 1000px
+  margin: 0 auto
+  padding: 0 32px
+
+  @media ( max-width: 767px )
+    padding: 0 16px
+
+.section
+  margin-bottom: 60px
+
+  &__head
+    margin-bottom: 32px
+
+  &__foot
+    margin-top: 32px
+
+h1,
+.h1
+  font-size: 38px
+  line-height: 1.2
+  margin: 32px 0 24px
+
+  @media ( max-width: 767px )
+    font-size: 32px
+    margin: 28px 0 20px
+
+h2,
+.h2
+  font-size: 32px
+  line-height: 1.2
+  margin: 28px 0 20px
+
+  @media ( max-width: 767px )
+    font-size: 28px
+    margin: 24px 0 16px
+
+h3,
+.h3
+  font-size: 26px
+  line-height: 1.2
+  margin: 24px 0 16px
+
+  @media ( max-width: 767px )
+    font-size: 24px
+    margin: 20px 0 12px
+
+h4,
+.h4
+  font-size: 20px
+  line-height: 1.2
+  margin: 20px 0 16px
+
+  @media ( max-width: 767px )
+    font-size: 18px
+    margin: 16px 0 12px
+
+
+.text-content
+  a:not([class])
+    color: var( --link )
+    text-decoration: underline rgba( 24, 117, 202, 0 )
+    text-underline-offset: 2px
+    transition: text-decoration .3s ease
+
+    &:hover
+      @media ( hover: hover )
+        text-decoration-color: var( --link )
+
+  > :first-child
+    margin-top: 0 !important
+
+  > :last-child
+    margin-bottom: 0 !important
+
+  p
+    margin: 16px 0
+
+    @media ( max-width: 767px )
+      margin: 12px 0
+
+  ul:not([class]),
+  ol:not([class])
+    display: flex
+    flex-direction: column
+    gap: 8px
+    margin: 24px 0
+
+    @media ( max-width: 767px )
+      margin: 16px 0
+
+    > li
+      padding-left: 24px
+      position: relative
+
+  ul:not([class])
+    > li
+      &:before
+        content: ''
+        position: absolute
+        top: 10px
+        left: 4px
+        display: block
+        width: 4px
+        height: 4px
+        border-radius: 2px
+        background-color: var( --blue )
+
+  ol:not([class])
+    counter-reset: num
+
+    > li
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        color: var( --blue )
+        content: counters( num, '.' ) ' '
+        counter-increment: num
+        display: block
+
+    ol:not([class])
+      > li
+        padding-left: 32px
+
+  .table-wrapper
+    overflow: auto
+    margin: 32px 0
+
+  table
+    width: 100%
+    border-collapse: collapse
+
+    @media ( max-width: 767px )
+      margin: 16px 0
+
+    th,
+    td
+      border: 1px solid var( --gray-light )
+      padding: 16px
+
+    th
+      font-weight: 600
+      font-size: 20px
+
+.icon-checkbox
+  width: 18px
+  height: 13px
+
+.cols
+  display: flex
+  flex-wrap: wrap
+  margin: -30px -15px 0
+
+  @media ( max-width: 767px )
+    margin: -16px -8px 0
+
+  > *
+    padding: 0 15px
+    flex: 1 0 auto
+    width: 100%
+    max-width: 100%
+    margin-top: 30px
+
+    @media ( max-width: 767px )
+      padding: 0 8px
+      margin-top: 16px
+
+  + .cols
+    margin-top: 30px
+
+  > .col-1
+    flex: 0 0 auto
+    width: 8.33333333%
+
+  > .col-2
+    flex: 0 0 auto
+    width: 16.66666667%
+
+  > .col-3
+    flex: 0 0 auto
+    width: 25%
+
+  > .col-4
+    flex: 0 0 auto
+    width: 33.33333333%
+
+  > .col-5
+    flex: 0 0 auto
+    width: 41.66666667%
+
+  > .col-6
+    flex: 0 0 auto
+    width: 50%
+
+  > .col-7
+    flex: 0 0 auto
+    width: 58.33333333%
+
+  > .col-8
+    flex: 0 0 auto
+    width: 66.66666667%
+
+  > .col-9
+    flex: 0 0 auto
+    width: 75%
+
+  > .col-10
+    flex: 0 0 auto
+    width: 83.33333333%
+
+  > .col-11
+    flex: 0 0 auto
+    width: 91.66666667%
+
+  > .col-12
+    flex: 0 0 auto
+    width: 100%
+
+  @media ( min-width: 576px )
+    > .col-s-1
+      flex: 0 0 auto
+      width: 8.33333333%
+
+    > .col-s-2
+      flex: 0 0 auto
+      width: 16.66666667%
+
+    > .col-s-3
+      flex: 0 0 auto
+      width: 25%
+
+    > .col-s-4
+      flex: 0 0 auto
+      width: 33.33333333%
+
+    > .col-s-5
+      flex: 0 0 auto
+      width: 41.66666667%
+
+    > .col-s-6
+      flex: 0 0 auto
+      width: 50%
+
+    > .col-s-7
+      flex: 0 0 auto
+      width: 58.33333333%
+
+    > .col-s-8
+      flex: 0 0 auto
+      width: 66.66666667%
+
+    > .col-s-9
+      flex: 0 0 auto
+      width: 75%
+
+    > .col-s-10
+      flex: 0 0 auto
+      width: 83.33333333%
+
+    > .col-s-11
+      flex: 0 0 auto
+      width: 91.66666667%
+
+    > .col-s-12
+      flex: 0 0 auto
+      width: 100%
+
+  @media ( min-width: 768px )
+    > .col-m-1
+      flex: 0 0 auto
+      width: 8.33333333%
+
+    > .col-m-2
+      flex: 0 0 auto
+      width: 16.66666667%
+
+    > .col-m-3
+      flex: 0 0 auto
+      width: 25%
+
+    > .col-m-4
+      flex: 0 0 auto
+      width: 33.33333333%
+
+    > .col-m-5
+      flex: 0 0 auto
+      width: 41.66666667%
+
+    > .col-m-6
+      flex: 0 0 auto
+      width: 50%
+
+    > .col-m-7
+      flex: 0 0 auto
+      width: 58.33333333%
+
+    > .col-m-8
+      flex: 0 0 auto
+      width: 66.66666667%
+
+    > .col-m-9
+      flex: 0 0 auto
+      width: 75%
+
+    > .col-m-10
+      flex: 0 0 auto
+      width: 83.33333333%
+
+    > .col-m-11
+      flex: 0 0 auto
+      width: 91.66666667%
+
+    > .col-m-12
+      flex: 0 0 auto
+      width: 100%
+
+  @media ( min-width: 1024px )
+    > .col-l-1
+      flex: 0 0 auto
+      width: 8.33333333%
+
+    > .col-l-2
+      flex: 0 0 auto
+      width: 16.66666667%
+
+    > .col-l-3
+      flex: 0 0 auto
+      width: 25%
+
+    > .col-l-4
+      flex: 0 0 auto
+      width: 33.33333333%
+
+    > .col-l-5
+      flex: 0 0 auto
+      width: 41.66666667%
+
+    > .col-l-6
+      flex: 0 0 auto
+      width: 50%
+
+    > .col-l-7
+      flex: 0 0 auto
+      width: 58.33333333%
+
+    > .col-l-8
+      flex: 0 0 auto
+      width: 66.66666667%
+
+    > .col-l-9
+      flex: 0 0 auto
+      width: 75%
+
+    > .col-l-10
+      flex: 0 0 auto
+      width: 83.33333333%
+
+    > .col-l-11
+      flex: 0 0 auto
+      width: 91.66666667%
+
+    > .col-l-12
+      flex: 0 0 auto
+      width: 100%

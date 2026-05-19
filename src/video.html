@@ -1,0 +1,65 @@
+@@include('html/header.html',{
+'title': 'Видео',
+'breadcrumb': [{
+link: '/',
+title: 'Главная'
+},{
+link: '',
+title: 'Видео'
+}],
+'h1': 'Видео'
+})
+
+<section class="section">
+    <div class="container">
+        <div class="video">
+            <div class="video__action-wrapper | js-play-video">
+                <div class="video__action">
+                    <svg class="svg-icon__pause">
+                        <use href="./images/sprite.svg#pause"></use>
+                    </svg>
+                    <svg class="svg-icon__play">
+                        <use href="./images/sprite.svg#play"></use>
+                    </svg>
+                </div>
+
+                <div class="video__title">
+                    Заголовок подпись под видео
+                </div>
+            </div>
+
+            <video playsinline loop muted>
+                <source src="./files/vertical-2.mp4" type="video/mp4" media="(max-width: 767px)">
+                <source src="./files/nature.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="video">
+            <div class="video__action-wrapper | js-play-video">
+                <div class="video__action">
+                    <svg class="svg-icon__pause">
+                        <use href="./images/sprite.svg#pause"></use>
+                    </svg>
+                    <svg class="svg-icon__play">
+                        <use href="./images/sprite.svg#play"></use>
+                    </svg>
+                </div>
+
+                <div class="video__title">
+                    Заголовок подпись под видео
+                </div>
+            </div>
+
+            <video playsinline loop muted>
+                <source src="./files/vertical-2.mp4" type="video/mp4" media="(max-width: 767px)">
+                <source src="./files/nature.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+@@include('html/footer.html')

@@ -1,0 +1,73 @@
+.popup
+  width: 100%
+  max-width: 1000px
+  margin: 0 auto
+  position: relative
+  opacity: 0
+  visibility: hidden
+  translate: 0 -16px
+  transition: opacity .3s ease, visibility .3s ease, translate .3s ease
+
+  &._show
+    opacity: 1
+    visibility: visible
+    translate: 0 0
+
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+    width: 100%
+    height: 100%
+    background-color: rgba( 4, 4, 4, .8 )
+    opacity: 0
+    visibility: hidden
+    transition: opacity .3s ease, visibility .3s ease
+    overflow-y: auto
+    padding: 32px
+
+    &._show
+      opacity: 1
+      visibility: visible
+
+    &._loader
+      background-image: url( ../images/loader-white.svg )
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 56px
+
+  &__content
+    background-color: #ffffff
+    border-radius: 32px
+    padding: 32px
+
+  &__close
+    position: absolute
+    top: 16px
+    right: 16px
+    width: 40px
+    height: 40px
+    cursor: pointer
+    transition: scale .3s ease
+
+    &:hover
+      @media ( hover: hover )
+        scale: 1.2
+
+    &:before,
+    &:after
+      content: ''
+      background-color: #202020
+      display: flex
+      width: 20px
+      height: 2px
+      position: absolute
+      top: 50%
+      left: 50%
+      translate: -50% -50%
+      rotate: 45deg
+
+    &:after
+      width: 2px
+      height: 20px
