@@ -1,5 +1,6 @@
 /.idea
 /.osp
 /build
+/gulp/version.json
 /node_modules
 /package-lock.json

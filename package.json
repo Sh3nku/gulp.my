@@ -1,0 +1,25 @@
+{
+  "name": "kz39",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "gulp deployFTP"
+  },
+  "author": "Shenku",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-util": "^3.0.8",
+    "gulp-version-number": "^0.2.4",
+    "sass": "^1.85.0",
+    "vinyl-ftp": "^0.6.1"
+  }
+}
