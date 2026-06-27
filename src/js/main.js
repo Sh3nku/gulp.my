@@ -323,4 +323,24 @@ $( function () {
             }
         });
     });
+
+    // Cookie
+
+
+    $( document ).on( 'click', '.js-cookie-confirm', function () {
+        let date = new Date( Date.now() + 60 * 60 * 1000 * 24 * 7 );
+        date = date.toUTCString();
+
+        document.cookie = "confirmCookie=Y; path=/; expires=" + date;
+
+        $( '.cookie' ).removeClass( '_open' );
+    });
+
+    $( window ).on( 'load', function () {
+        let cookie = $( '.cookie' );
+
+        if ( cookie.length && !document.cookie.match(/confirmCookie=Y(;|$)/) ) {
+            cookie.addClass( '_open' );
+        }
+    });
 });
