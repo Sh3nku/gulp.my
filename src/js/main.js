@@ -326,7 +326,6 @@ $( function () {
 
     // Cookie
 
-
     $( document ).on( 'click', '.js-cookie-confirm', function () {
         let date = new Date( Date.now() + 60 * 60 * 1000 * 24 * 7 );
         date = date.toUTCString();
