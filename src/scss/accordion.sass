@@ -1,8 +1,19 @@
+.accordions
+  display: flex
+  flex-direction: column
+  gap: 16px
+
 .accordion
   &__head
     cursor: pointer
+    background-color: var( --gray )
+    padding: 16px
 
   &__body
     height: 0
     overflow: hidden
     transition: height .3s ease
+
+  &__inner
+    background-color: var( --gray-light )
+    padding: 16px

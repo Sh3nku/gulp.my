@@ -254,7 +254,7 @@ $( function () {
     });
 
     // Аккордеон
-    $( document ).on( 'click', '.js-accordion', function () {
+    /*$( document ).on( 'click', '.js-accordion', function () {
         let accordion = $( this ).closest( '.accordion' ),
             accordionBody = accordion.children( '.accordion__body' ),
             heightContent = accordionBody.children( '.accordion__inner' ).outerHeight();
@@ -269,7 +269,7 @@ $( function () {
                 accordion.addClass( '_open' );
             }
         }, 1 )
-    });
+    });*/
 
     // Табы
     $( document ).on( 'change', '.tabs-button input', function () {
@@ -340,6 +340,38 @@ $( function () {
 
         if ( cookie.length && !document.cookie.match(/confirmCookie=Y(;|$)/) ) {
             cookie.addClass( '_open' );
+        }
+    });
+});
+
+const accordions = document.querySelectorAll( '.js-accordion' );
+
+accordions.forEach( accordion => {
+    const body = accordion.querySelector( '.accordion__body' );
+
+    if ( accordion.classList.contains( '_open' ) ) {
+        body.style.height = body.scrollHeight + 'px';
+    }
+});
+
+accordions.forEach(accordion => {
+    const head = accordion.querySelector( '.accordion__head' );
+    const body = accordion.querySelector( '.accordion__body' );
+
+    head.addEventListener('click', () => {
+        accordions.forEach( otherAccordion => {
+            if ( otherAccordion !== accordion ) {
+                otherAccordion.classList.remove( '_open' );
+                otherAccordion.querySelector( '.accordion__body' ).style.height = null;
+            }
+        });
+
+        if ( accordion.classList.contains( '_open' ) ) {
+            accordion.classList.remove( '_open' );
+            body.style.height = null;
+        } else {
+            accordion.classList.add( '_open' );
+            body.style.height = body.scrollHeight + 'px';
         }
     });
 });
