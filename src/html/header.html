@@ -15,18 +15,26 @@
         <div class="container">
             <div class="section__head">
                 @@if ( breadcrumb ) {
-                    <nav class="breadcrumb">
-                        <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <nav class="breadcrumb" aria-label="breadcrumb">
+                        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                             @@for (var i = 0; i < breadcrumb.length; i++) {
-                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="` + breadcrumb[i].link + `">
-                                    <span itemprop="name">` + breadcrumb[i].title + `</span>
-                                </a>
+                            <li
+                                itemprop="itemListElement"
+                                itemscope
+                                itemtype="https://schema.org/ListItem"
+                            >
+                                ${
+                                breadcrumb[i].link
+                                    ? `<a itemprop="item" href="${breadcrumb[i].link}">
+                                        <span itemprop="name">${breadcrumb[i].title}</span>
+                                    </a>`
+                                    : `<span itemprop="name">${breadcrumb[i].title}</span>`
+                                }
 
-                                <meta itemprop="position" content="` + ( i+1 ) + `" />
+                                <meta itemprop="position" content="${i + 1}" />
                             </li>
                             }
-                        </ul>
+                        </ol>
                     </nav>
                 }
 
