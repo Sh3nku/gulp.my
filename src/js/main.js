@@ -253,24 +253,6 @@ $( function () {
         $( this ).closest( '.form__input, .inputs' ).removeClass( '_error' ).children( '.form__input-error' ).remove();
     });
 
-    // Аккордеон
-    /*$( document ).on( 'click', '.js-accordion', function () {
-        let accordion = $( this ).closest( '.accordion' ),
-            accordionBody = accordion.children( '.accordion__body' ),
-            heightContent = accordionBody.children( '.accordion__inner' ).outerHeight();
-
-        accordionBody.css( 'height', heightContent );
-
-        setTimeout( function () {
-            if ( accordion.hasClass( '_open' ) ) {
-                accordion.removeClass( '_open' );
-                accordionBody.css( 'height', 0 );
-            } else {
-                accordion.addClass( '_open' );
-            }
-        }, 1 )
-    });*/
-
     // Табы
     $( document ).on( 'change', '.tabs-button input', function () {
         tabs();
