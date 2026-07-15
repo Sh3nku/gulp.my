@@ -150,7 +150,7 @@
             
                 <div class="dk-dropzone__item-body">
                     <div class="dk-dropzone__item-icon">
-                        ${ picture ? picture : '<svg class="svg-icon _file"><use href="/templates/online/images/icons/file.svg#file"></use></svg>' }
+                        ${ picture ? picture : '<svg class="svg-icon _file"><use href="/images/file.svg#file"></use></svg>' }
                     </div>
                     
                     <div class="dk-dropzone__item-content">
@@ -160,7 +160,7 @@
                     
                     <div class="dk-dropzone__item-remove">
                         <svg class="svg-icon _close">
-                            <use href="/templates/online/images/icons/close.svg#close"></use>
+                            <use href="/images/close.svg#close"></use>
                         </svg>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
                 add.append(`
                     <div class="dk-dropzone__add-picture">
                         <svg class="svg-icon _dropzone">
-                            <use xlink:href="/templates/online/images/icons/dkDropZone.svg#dkDropZone"></use>
+                            <use xlink:href="/images/dkDropZone.svg#dkDropZone"></use>
                         </svg>
                     </div>
                     
