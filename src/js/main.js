@@ -315,7 +315,7 @@ $( function () {
 
         $.ajax({
             url: href,
-            type: 'POST',
+            type: 'GET',
 
             success: function( data ) {
                 paginationWrapper.remove();
