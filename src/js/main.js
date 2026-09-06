@@ -43,7 +43,6 @@ function popupOpen ( array ) {
             url: array.url,
             type: 'POST',
             data: array.data,
-            async: false,
             success: function( data ) {
                 let html = data;
 
@@ -52,33 +51,42 @@ function popupOpen ( array ) {
                     if ( html === undefined ) html = $( data ).filter( '#' + array.hashtag ).html();
                 }
 
-                overlay.removeClass( '_loader' );
                 content.html( html );
 
-                content[0].querySelectorAll( 'input[type=tel]' ).forEach( e => IMask( e, {
-                    mask: '+{7} ( 000 ) 000-00-00'
-                }));
+                content[0]
+                    .querySelectorAll( 'input[type=tel]' )
+                    .forEach( e => IMask( e, {
+                        mask: '+{7} ( 000 ) 000-00-00'
+                    }));
+
+                popupPosition( popup );
+            },
+
+            complete: function() {
+                overlay.removeClass( '_loader' );
+
+                setTimeout(function () {
+                    popup.addClass( '_show' );
+                }, timeout);
             }
         });
     } else {
         content.html( array.content );
     }
 
-    let popupHeight = popup.height() + 64,
+    popupIsOpen = true;
+}
+
+function popupPosition( popup ) {
+    let popupHeight = popup.outerHeight() + 64,
         windowHeight = $( window ).height(),
         marginTop = 0;
 
     if ( popupHeight < windowHeight ) {
-        marginTop = ( windowHeight - popupHeight ) / 2
+        marginTop = ( windowHeight - popupHeight ) / 2;
     }
 
     popup.css( 'margin-top', marginTop );
-
-    setTimeout(function () {
-        popup.addClass( '_show' );
-    }, timeout);
-
-    popupIsOpen = true;
 }
 
 function popupClose () {
